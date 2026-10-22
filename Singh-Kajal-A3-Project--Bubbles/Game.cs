@@ -10,8 +10,8 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
-        
 
+        Color BubbleColor = Random.Color();
 
 
 
@@ -60,8 +60,6 @@ namespace MohawkGame2D
             //Carriage Handle
             Draw.FillColor = Color.Cyan;
             Draw.Rectangle(120, 350, 80, 25);
-
-            //Wheel Drag(???) Rotation(???)
 
 
 
