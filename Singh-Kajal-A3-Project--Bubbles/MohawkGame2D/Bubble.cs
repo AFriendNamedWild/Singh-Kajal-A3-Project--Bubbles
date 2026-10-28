@@ -9,13 +9,13 @@ namespace MohawkGame2D
         float x = 0.0f;
         float y = 0.0f;
         float speed = 50.0f;
-            
+        Color BubbleColor = Random.Color();
+
         public void Setup()
         {
             x = Random.Float (370, 560);
-            y = Random.Float (370, 560);
 
-            speed = Random.Float (50, 120);
+            speed = Random.Float (70, 150);
 
             Color BubbleColor = Random.Color();
         }
@@ -24,16 +24,17 @@ namespace MohawkGame2D
         {
             //Bubble
 
-            float x = 0.0f;
-            float y = 0.0f;
+            Draw.FillColor = BubbleColor;
 
-            Draw.Circle(400, 260, 30);
-
+            Draw.Circle(x, 260 - y,  30);
 
             //movement code
             y += speed * Time.DeltaTime;
 
-           
+           if (Input.IsMouseButtonPressed(MouseButton.Left) == true)
+            {
+                y = 0;
+            }
 
         }
     }

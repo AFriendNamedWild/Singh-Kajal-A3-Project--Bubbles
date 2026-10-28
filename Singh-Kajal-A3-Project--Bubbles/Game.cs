@@ -14,7 +14,9 @@ namespace MohawkGame2D
         Color BubbleColor = Random.Color();
 
         Bubble bubble1 = new Bubble();
-
+        Bubble bubble2 = new Bubble();
+        Bubble bubble3 = new Bubble();
+        Bubble bubble4 = new Bubble();
 
 
         public void Setup()
@@ -23,6 +25,9 @@ namespace MohawkGame2D
             Window.SetTitle("The Amazing Bubble Machine!");
 
             bubble1.Setup();
+            bubble2.Setup();
+            bubble3.Setup();
+            bubble4.Setup();
 
         }
 
@@ -31,13 +36,13 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-            Window.ClearBackground(Color.OffWhite);
+            Window.ClearBackground(Color.Cyan);
 
             //Bubble Machine Drawing
 
             //Carriage
             Draw.LineSize = 0;
-            Draw.SetFillColor(Color.DarkGray);
+            Draw.SetFillColor(Color.Magenta);
             Draw.Quad(180, 350, 250, 500, 500, 500, 570, 350);
 
             //Wheels
@@ -59,11 +64,16 @@ namespace MohawkGame2D
             Draw.Quad(370, 300, 420, 350, 520, 350, 560, 300);
 
             //Carriage Handle
-            Draw.FillColor = Color.Cyan;
+            Draw.FillColor = Color.Yellow;
             Draw.Rectangle(120, 350, 80, 25);
 
             bubble1.Update();
 
+            bubble2.Update();
+
+            bubble3.Update();
+
+            bubble4.Update();
         }
     }
 
