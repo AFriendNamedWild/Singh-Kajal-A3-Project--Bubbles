@@ -13,7 +13,7 @@ namespace MohawkGame2D
 
         Color BubbleColor = Random.Color();
 
-
+        Bubble bubble1 = new Bubble();
 
 
 
@@ -22,6 +22,7 @@ namespace MohawkGame2D
             Window.SetSize(800, 600);
             Window.SetTitle("The Amazing Bubble Machine!");
 
+            bubble1.Setup();
 
         }
 
@@ -61,17 +62,7 @@ namespace MohawkGame2D
             Draw.FillColor = Color.Cyan;
             Draw.Rectangle(120, 350, 80, 25);
 
-
-
-           
-         
-
-
-
-
-
-
-
+            bubble1.Update();
 
         }
     }
