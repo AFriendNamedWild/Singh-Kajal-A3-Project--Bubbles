@@ -1,6 +1,7 @@
 ﻿// Include the namespaces (code libraries) you need below.
 using System;
 using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 
 // The namespace your code is in.
 namespace MohawkGame2D
@@ -38,6 +39,7 @@ namespace MohawkGame2D
         {
             Window.ClearBackground(Color.Cyan);
 
+
             //Bubble Machine Drawing
 
             //Carriage
@@ -67,6 +69,21 @@ namespace MohawkGame2D
             Draw.FillColor = Color.Yellow;
             Draw.Rectangle(120, 350, 80, 25);
 
+            //Clouds
+
+            //For Loops allows a drawing to 'loop/repeat' for a set amount 
+
+            for (int i = -5; i < 5; i++) // Help from professor, need to relearn For loops
+            {
+                float x = i * 450 + 10 * Time.SecondsElapsed; //Difference between Seconds and TimeDelta is the smoothness of the movement across the axes!
+                DrawClouds(x); // The X means to place it somewhere on the X axis, so it has a consistant location!
+            }
+
+          //  DrawClouds(0 + 2 * Time.SecondsElapsed); //This is a Function!
+
+          //  DrawClouds(450 + 2 * Time.SecondsElapsed); // This is a Funtion positioned somewhere else! 
+
+
             bubble1.Update();
 
             bubble2.Update();
@@ -74,7 +91,34 @@ namespace MohawkGame2D
             bubble3.Update();
 
             bubble4.Update();
+
+
         }
+
+        public void DrawClouds(float x) //This is a declared Function!
+        {
+            
+            Draw.FillColor = Color.White;
+            
+            //First Cloud
+            Draw.Ellipse(100 + x, 40, 250, 40);
+            Draw.Ellipse(150 + x, 75, 160, 40);
+
+            //Second Cloud
+            Draw.Ellipse(290 + x, 150, 180, 60);
+
+            //Third Cloud
+            Draw.Ellipse(40 + x, 170, 90, 40);
+
+        }
+            
+          
+
+
+        
+
+
     }
+
 
 }

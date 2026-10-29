@@ -14,17 +14,23 @@ namespace MohawkGame2D
 
         }
 
-        public void Update() 
+        public void Update()
         {
-        
-        
-        
-        
+
+
+
+
+
         }
 
+        public void DrawCloud()
+        {
+            Draw.FillColor = Color.White;
+            Draw.Ellipse(100, 100, 100, 100); 
 
 
 
+        }
 
     }
 }
