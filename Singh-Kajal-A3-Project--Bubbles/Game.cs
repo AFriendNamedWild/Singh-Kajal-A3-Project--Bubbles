@@ -6,7 +6,6 @@ namespace MohawkGame2D
     /// </summary>
     public class Game
     {
-
         Color BubbleColor = Random.Color();
 
         Bubble bubble1 = new Bubble();
@@ -14,6 +13,7 @@ namespace MohawkGame2D
         Bubble bubble3 = new Bubble();
         Bubble bubble4 = new Bubble();
 
+        Sun sun1 = new Sun();
 
         public void Setup()
         {
@@ -24,6 +24,8 @@ namespace MohawkGame2D
             bubble2.Setup();
             bubble3.Setup();
             bubble4.Setup();
+
+            sun1.Setup();
 
         }
 
@@ -64,6 +66,10 @@ namespace MohawkGame2D
             Draw.FillColor = Color.Yellow;
             Draw.Rectangle(120, 350, 80, 25);
 
+                //Sun
+
+                sun1.Update();
+
             //Clouds
 
             //For Loops allows a drawing to 'loop/repeat' for a set amount 
@@ -74,9 +80,11 @@ namespace MohawkGame2D
                 DrawClouds(x); // The X means to place it somewhere on the X axis, so it has a consistant location!
             }
 
-          //  DrawClouds(0 + 2 * Time.SecondsElapsed); //This is a Function!
+            //  DrawClouds(0 + 2 * Time.SecondsElapsed); //This is a Function!
 
-          //  DrawClouds(450 + 2 * Time.SecondsElapsed); // This is a Funtion positioned somewhere else! 
+            //  DrawClouds(450 + 2 * Time.SecondsElapsed); // This is a Funtion positioned somewhere else! 
+
+
 
 
             bubble1.Update();
@@ -105,11 +113,12 @@ namespace MohawkGame2D
             Draw.Ellipse(40 + x, 170, 90, 40);
 
         }
-            
-          
-
 
         
+
+
+
+
 
 
     }
