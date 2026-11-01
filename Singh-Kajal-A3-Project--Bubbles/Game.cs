@@ -1,9 +1,4 @@
-﻿// Include the namespaces (code libraries) you need below.
-using System;
-using System.Numerics;
-using System.Security.Cryptography.X509Certificates;
-
-// The namespace your code is in.
+﻿// The namespace your code is in.
 namespace MohawkGame2D
 {
     /// <summary>
@@ -91,7 +86,6 @@ namespace MohawkGame2D
             bubble3.Update();
 
             bubble4.Update();
-
 
         }
 
